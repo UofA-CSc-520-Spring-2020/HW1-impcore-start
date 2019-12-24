@@ -1,12 +1,12 @@
-# CSc 520 - Assignment Name
+# CSc 520 - **Assignment Name**
 
-## Name: 
+## Name: **Name**
 ## Partner Name (if applicable):
 
 
 ## Time Spent on Assignment
 
-Total hrs: 
+Total hrs: ** hours **
 
 Breakdown (optional):
 
