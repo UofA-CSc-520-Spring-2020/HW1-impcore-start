@@ -1,0 +1,185 @@
+;; Name: 
+;; Date due:
+;; CSc 520 Homework 1: Impcore
+;; File: solution.imp
+;; Purpose: Contains Impcore code solutions 
+
+
+;;============================================================
+;;
+;; Problem 4
+;;
+;;============================================================
+;; (sigma m n) <does what exactly?> [this is the contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+(check-error (sigma 1 5)) ;; when function is working,
+                          ;; remove this check-error 
+
+;; Function Definition:
+(define sigma (m n)
+   (/ 1 0)) ;;; replace this clearly wrong code with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+
+;;============================================================
+;;
+;; Problem 5
+;;
+;;============================================================
+;; (exp b n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition:
+(define exp(b n)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+;;============================================================
+;; (log b n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:      
+;; Replace this comment with good (check-expect ...) tests
+
+;; Definition:
+(define log(b n)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+        
+
+
+;;============================================================
+;;
+;; Problem 7
+;;
+;;============================================================
+;; (fib m) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition
+(define fib(m)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+
+;;============================================================
+;;
+;; Problem 8
+;;
+;;============================================================
+;; (prime? n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition
+(define prime?(n)
+   (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+;;============================================================
+;; (nthprime n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition
+(define nthprime(n)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+
+;;============================================================
+;; (sumprimes n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition
+(define sumprimes(n)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+;;============================================================
+;; (relprime? m n) <does what exactly?> [replace with function contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Function Definition
+(define relprime?(m n)
+    (/ 1 0)) ;; replace this with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+
+;;============================================================
+;;
+;; Problem 10
+;;
+;;============================================================
+;; (binary m) <does what exactly?> [this is the contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Definition:
+(define binary (m)
+   (/ 1 0)) ;;; replace this clearly wrong code with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
+
+
+
+;;============================================================
+;;
+;; Problem DD
+;;
+;;============================================================
+;; (double-digit n) <does what exactly?> [this is the contract]
+
+;; Examples and tests:
+;; Replace this comment with good (check-expect ...) tests
+
+;; Definition:
+(define double-digit (n)
+   (/ 1 0)) ;;; replace this clearly wrong code with a correct implementation
+
+;; Analysis of the induction:
+;;   - Description of one or more base cases
+;;   - Description of one or more inductive steps
