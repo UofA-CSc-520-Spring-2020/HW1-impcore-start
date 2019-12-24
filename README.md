@@ -1,8 +1,8 @@
-# CSc 520 - **Assignment Name**
+# CSc 520 - HW1 Impcore
 
 ## Name:
 
-**Name**
+**Put Name Here**
 
 
 ## Partner Name (if applicable):
