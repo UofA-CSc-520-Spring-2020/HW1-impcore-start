@@ -1,0 +1,106 @@
+-> (val a (IntArray.new 4 99))
+[99 99 99 99] : (@m Array Int).t
+-> (define int smallest-int ([a : IntArray.t])
+     (let ([smallest (IntArray.at a 0)]
+           [i 1]
+           [n (IntArray.size a)])
+        (while (Int.< i n)
+           (when (Int.< (IntArray.at a i) smallest)
+             (set smallest (IntArray.at a i)))
+           (set i (Int.+ i 1)))
+        smallest))
+smallest-int : ((@m Array Int).t -> Int.t)
+-> a
+[99 99 99 99] : (@m Array Int).t
+-> (smallest-int a)
+99 : Int.t
+-> (IntArray.at-put a 1 33)
+-> (IntArray.at-put a 2 55)
+-> (smallest-int a)
+33 : Int.t
+-> (record-module MyPair t ([n : Int.t] [b : Bool.t]))
+module MyPair : (exports (abstype t) [make : (Int.t Bool.t -> MyPair.t)] ...
+-> =
+overloaded = : (Char.t Char.t -> Bool.t)
+           = : (Sym.t Sym.t -> Bool.t)
+           = : (Bool.t Bool.t -> Bool.t)
+           = : (Int.t Int.t -> Bool.t)
+-> (= 'yes 'yes)
+#t : Bool.t
+-> (= #f #f)
+#t : Bool.t
+-> (= 3 3)
+#t : Bool.t
+-> (= Char.newline Char.space)
+#f : Bool.t
+-> (+ 1 Char.newline)
+type error: function + expects second argument of type Int.t, but got Char.t
+-> (= 10 Char.newline)
+type error: function = expects second argument of type Int.t, but got Char.t
+-> (module C Char)
+-> (C.println Char.right-curly)   
+}
+unit : Unit.t
+-> (module C Char)
+module C : (exports (type t Char.t) [new : (Int.t -> Char.t)] ...
+-> (module-type INTARRAY (allof ARRAY (exports [type elem Int.t])))
+-> (module [MyArray : INTARRAY] IntArray)
+module MyArray : (exports (abstype t) (type elem Int.t) ...
+-> (module-type BOOLARRAY (allof ARRAY (exports [type elem Bool.t])))
+-> (module [MyArray : BOOLARRAY] IntArray)
+type error: interface calls for type elem to manifestly equal Bool.t, but it is Int.t
+-> (use pq.mcl)  ; OMIT
+-> (module [IntHeap : ARRAY] (@m ArrayHeap Int))
+type error: interface calls for value new to have type ...
+-> (module IntHeap (@m ArrayHeap Int))
+module IntHeap : (exports (type t (@m ArrayHeap Int).t) (type elem Int.t) ...
+-> (module BoolHeap (@m ArrayHeap Bool))
+type error: module Bool cannot be used as argument Elem to generic module ...
+-> (module [OrderedBool : (exports [type t Bool.t]
+                                   [<= : (Bool.t Bool.t -> Bool.t)])]
+      (type t Bool.t)
+      (define t <= ([p : t] [q : t])
+         (or (not p) q)))
+-> (module BoolHeap (@m ArrayHeap OrderedBool))
+module BoolHeap : ...
+-> (module-type INCONSISTENT
+                (allof (exports [type t Bool.t]) (exports [type t Int.t])))
+module type INCONSISTENT = ...
+-> (module [R : (exports [abstype t] [x : t])]
+      (type t Int.t)
+      (val x 1983))
+module R : (exports (abstype t) [x : R.t])
+-> (module [Intlist : (exports [abstype t] [Nil : t] [Cons : (int t -> t)])]
+      (data t
+         [Nil : t]
+         [Cons : (int t -> t)]))
+module Intlist : (exports ...
+-> (data key) (data value) ; OMIT
+-> (data BST [EMPTY : BST] [NODE : (BST key value BST -> BST)])
+BST :: *
+EMPTY : BST
+NODE : (BST key value BST -> BST)
+-> (module-type GENERIC-HASH
+       ([Key : (exports [abstype t]
+                        [hash : (t -> int)]
+                        [= : (t t -> bool)])]
+        [Value : (exports [abstype t])]
+            --m->
+              (exports
+                 [abstype t]
+                                         ;                 
+                 [abstype maybe-value] ; result of lookup
+                 [Not-Found : maybe-value]
+                 [Found     : (Value.t -> maybe-value)]
+                                         ;
+                 [new    : ( -> t)]
+                 [insert : (Key.t Value.t t -> unit)]
+                 [delete : (Key.t t -> unit)]
+                 [lookup : (Key.t t -> maybe-value)])))
+module type GENERIC-HASH = ...
+-> (val prime-sizes 
+         '(17 23 31 41 59 79 103 137 179 233 307 401 523 683 907 1181 1543
+           2011 2617 3407 4441 5779 7517 9781 12721 16547 21517 27983 36383
+           47303 61507 79967 103963 135173 175727 228451 296987 386093 501931
+           652541 848321 1102823 1433681 1863787 2422939 3149821 4094791
+           5323229 6920201 8996303 11695231 15203803 19764947 25694447 33402793))

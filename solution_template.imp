@@ -19,7 +19,7 @@
 
 ;; Function Definition:
 (define sigma (m n)
-   (/ 1 0)) ;;; replace this clearly wrong code with a correct implementation
+    (/ 1 0)) ;;; replace this clearly wrong code with a correct implementation
 
 ;; Analysis of the induction:
 ;;   - Description of one or more base cases
